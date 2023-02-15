@@ -44,6 +44,10 @@ nav.nav a {
   max-width: 100%;
   font-weight: bolder;
 }
+.main-header span {
+  color: yellowgreen;
+}
+
 .left-images img {
   max-width: 100px;
   height: 100px;
@@ -58,6 +62,9 @@ nav.nav a {
   display: flex;
   flex-direction: column;
   margin-left: 100px;
+  margin-top: 50px;
+}
+.main-buttons {
   margin-top: 50px;
 }
 .rainbow {
@@ -75,6 +82,7 @@ nav.nav a {
 }
 .heroimage {
   background-color: var(--bg-black);
+  padding-top: 100px;
 }
 .heroimage img {
   max-width: 700px;
@@ -107,14 +115,57 @@ nav.nav a {
 }
 
 .savings {
-  background-color: rgb(100, 130, 237);
+  /* background-color: rgb(100, 130, 237); */
+  background-color: #5532f1e6;
   color: var(--white-color);
+  padding-top: 50px;
+}
+.savings h3 {
+  background-color: pink;
+  padding: 0.8rem;
+  border-radius: 20px;
+  width: 170px;
+  text-align: center;
+}
+.savings h2 {
+  font-size: 3rem;
+  max-width: 300px;
+  font-weight: bolder;
+}
+.savings-item p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
 }
 .savings-img img {
   max-width: 300px;
   margin-left: 300px;
+  margin-bottom: 100px;
 }
 .spending {
+  padding-top: 100px;
+}
+.spending h2 {
+  background-color: rgb(0, 51, 128);
+  padding: 0.8rem;
+  border-radius: 20px;
+  width: 170px;
+  text-align: center;
+  color: var(--white-color);
+  font-weight: bold;
+}
+.spending h3 {
+  font-size: 3rem;
+  max-width: 300px;
+  font-weight: bolder;
+}
+.spending h4 {
+  margin-top: 40px;
+}
+.spending p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
 }
 
 .spending-img img {
@@ -140,6 +191,7 @@ nav.nav a {
 .moving-money h1 {
   font-size: 4rem;
   font-weight: bolder;
+  color: yellowgreen;
 }
 .money-img {
   margin-top: 100px;
