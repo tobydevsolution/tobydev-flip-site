@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Useflip Site</title>
     <!-- BOOSTRAP CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -56,7 +56,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Flip</a>
+                  <a class="nav-link" aria-current="page" href="#"> <span class="svgflip"> <img src="images/fliplogo.svg" alt=""/></span>
+                    Flip</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Blog</a>
@@ -114,11 +115,17 @@
       <div class="color-two"></div>
     </div> -->
 
-    <div class="heroimage">
-      <div class="container-fluid">
-        <img src="images/heroimage.png" alt="heroimage" />
+      <div class="hero">
+        <div class="container-fluid">
+            <div class="heroimage">
+            <img src="images/heroimage.png" alt="heroimage" />
+          </div>
+        </div>
+        <div class="inner-img">
+            <img src="images/bluecoins.png" alt="bluecoins" />
+          </div>
       </div>
-    </div>
+     
 
     <section class="flipacks">
       <div class="container">
@@ -164,7 +171,7 @@
                   <div class="savings-logo">
                     <img src="" alt="" />
                   </div>
-                  <p>6% Annual Percentage Yield</p>
+                  <p>No Lock Up Time</p>
                 </div>
               </div>
             </div>
@@ -174,20 +181,20 @@
                   <div class="savings-logo">
                     <img src="" alt="" />
                   </div>
-                  <p>6% Annual Percentage Yield</p>
+                  <p>Get Started In 59 Seconds</p>
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-6 col-md-12">
                 <div class="savings-item">
                   <div class="savings-logo">
                     <img src="" alt="" />
                   </div>
-                  <p>6% Annual Percentage Yield</p>
+                  <p>365 Days Of Uninterrupted Returns </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-md-12">
             <div class="savings-img">
               <img src="images/savings-image.png" alt="savings-image" />
             </div>
@@ -225,24 +232,37 @@
 
     <section class="flip-card">
       <div class="container-fluid">
+        <h1 class="text-center">Why Aren't You Saving With Flip?</h1>
         <div class="row">
           <div class="col-lg-6">
             <div class="flip-card-one">
-              <h2>Flip Earn</h2>
-              <p>Up To 6% In Yearly Interest</p>
-              <p>No Maintenance And Withdrawal Fees</p>
-              <p>Dollar Savings</p>
-              <p>Interest Paid Daily</p>
+              <h6 id="earn">Flip Earn</h6>
+              <div class="earning">
+                <p>Up To 6% In Yearly Interest</p>
+                <p>No Maintenance And Withdrawal Fees</p>
+                <p>Dollar Savings</p>
+                <p>Interest Paid Daily</p>
+              </div>
+              <div class="greenAPY">  
+                <div class="green-ball">
+                <div class="greenp"> 
+                     <p>6% APY</p>
+                </div>
+            </div>
+        </div>
+            
             </div>
           </div>
           <!-- <span>Vs</span> -->
           <div class="col-lg-6">
             <div class="flip-card-one">
-              <h2>Nigerian Bank</h2>
-              <p>Less Than 0.5% In Yearly Interest</p>
-              <p>Maintenance And Withdrawal Fees</p>
-              <p>Naira Savings</p>
-              <p>Interest Paid Yearly</p>
+              <h6 id="bank">Nigerian Bank</h6>
+              <div class="earning">
+                <p>Less Than 0.5% In Yearly Interest</p>
+                <p>Maintenance And Withdrawal Fees</p>
+                <p>Naira Savings</p>
+                <p>Interest Paid Yearly</p>
+              </div>
             </div>
           </div>
         </div>

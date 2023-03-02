@@ -17,14 +17,24 @@ ul li.nav-item {
   border: 2px solid #fff;
   background-color: var(--white-color);
   border-radius: 20px;
-  padding: 0.5rem;
 }
 ul.navbar-nav li a {
   color: var(--bg-black);
   font-weight: bold;
   font-size: 1.1rem;
 }
-
+ul.navbar-nav li a img {
+  /* background-color: var(--bg-black); */
+  background-color: var(--white-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.svgflip path {
+  fill: var(--white-color);
+  font-weight: bold;
+}
 nav.nav a {
   width: 150px;
   height: 50px;
@@ -45,7 +55,7 @@ nav.nav a {
   font-weight: bolder;
 }
 .main-header span {
-  color: yellowgreen;
+  color: #abfb04;
 }
 
 .left-images img {
@@ -80,10 +90,22 @@ nav.nav a {
   height: 100px;
   background: greenyellow;
 }
-.heroimage {
+.hero {
   background-color: var(--bg-black);
   padding-top: 100px;
+  width: 100%;
 }
+.hero {
+  position: relative;
+  z-index: 1;
+}
+.inner-img img {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 20%;
+}
+
 .heroimage img {
   max-width: 700px;
   margin: 0 auto;
@@ -102,8 +124,11 @@ nav.nav a {
   font-size: 80px;
   font-weight: bolder;
 }
-.flipimage img {
+.flipimage {
   max-width: 600px;
+}
+.flipimage img {
+  width: 100%;
   display: block;
 }
 .wallet {
@@ -116,15 +141,16 @@ nav.nav a {
 
 .savings {
   /* background-color: rgb(100, 130, 237); */
-  background-color: #5532f1e6;
+  background-color: #2c3cfc;
   color: var(--white-color);
   padding-top: 50px;
 }
 .savings h3 {
   background-color: pink;
   padding: 0.8rem;
-  border-radius: 20px;
+  border-radius: 50%;
   width: 170px;
+  transform: rotate(-10deg);
   text-align: center;
 }
 .savings h2 {
@@ -137,19 +163,23 @@ nav.nav a {
   font-weight: bold;
   margin-top: 50px;
 }
-.savings-img img {
+.savings-img {
   max-width: 300px;
+}
+.savings-img img {
+  width: 100%;
   margin-left: 300px;
-  margin-bottom: 100px;
+  margin-top: -200px;
 }
 .spending {
   padding-top: 100px;
 }
 .spending h2 {
-  background-color: rgb(0, 51, 128);
+  background-color: rgb(44, 60, 252);
   padding: 0.8rem;
   border-radius: 20px;
   width: 170px;
+  transform: rotate(-10deg);
   text-align: center;
   color: var(--white-color);
   font-weight: bold;
@@ -175,14 +205,70 @@ nav.nav a {
 .flip-card {
   background-color: var(--bg-black);
   color: var(--white-color);
-  padding-top: 200px;
+  padding-top: 50px;
+}
+.flip-card h1 {
+  margin: 100px 0 100px 0;
 }
 .flip-card-one {
   border: 2px solid grey;
   border-radius: 40px;
-  width: 570px;
+  max-width: 570px;
   padding: 20% 0 20% 13%;
   box-sizing: border-box;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.earning {
+  line-height: 3;
+  font-size: 1.2rem;
+}
+.greenAPY {
+  position: absolute;
+  right: -30px;
+  top: -60px;
+  transform: rotate(-10deg);
+}
+.flip-card-one h6 {
+  border: 7px solid #fff;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 50px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  transform: rotate(-10deg);
+}
+#earn {
+  background-color: rgb(44 60 252);
+}
+#bank {
+  background-color: #84fb8a;
+  color: var(--bg-black);
+}
+.green-ball {
+  background-color: #14c49c;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  position: relative;
+  top: 0;
+  right: 20;
+}
+.greenp {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+.greenp p {
+  margin-bottom: 0;
+  font-size: 2.8rem;
+  font-weight: bolder;
+  line-height: 1;
 }
 .moving-money {
   background-color: var(--bg-black);
@@ -191,23 +277,24 @@ nav.nav a {
 .moving-money h1 {
   font-size: 4rem;
   font-weight: bolder;
-  color: yellowgreen;
+  color: #abfb04;
 }
 .money-img {
   margin-top: 100px;
+  max-width: 400px;
 }
 .money-img img {
-  max-width: 400px;
+  max-width: 100%;
 }
 .download {
   background-color: var(--bg-black);
 }
 .download-img {
-  max-width: 100%;
-}
-.download-img img {
   max-width: 1000px;
   margin: 0 auto;
+}
+.download-img img {
+  width: 100%;
   display: block;
 }
 
@@ -239,4 +326,21 @@ footer ul li a,
   color: var(--white-color);
   line-height: 3;
   font-weight: bold;
+}
+
+/* BLOG PAGE STYLING */
+
+.heading-text {
+  text-align: center;
+  margin: 0 auto;
+  color: var(--white-color);
+}
+.heading-text h3:nth-child(2) {
+  color: #84fb8a;
+}
+.card-img {
+  max-width: 100%;
+}
+.card-img img {
+  width: 100%;
 }
