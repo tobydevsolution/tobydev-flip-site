@@ -12,6 +12,19 @@
       crossorigin="anonymous"
     />
 
+    <!--TEXT FONTS-->
+
+    <link href='https://fonts.googleapis.com/css?family=Coda&subset=latin' rel='stylesheet' type='text/css'>
+
+     <!-- FONT AWESOME FONTS -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   />
+
     <!-- CSS STYLESEET -->
     <link rel="stylesheet" href="css/styles.css" />
 
@@ -56,11 +69,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#"> <span class="svgflip"> <img src="images/fliplogo.svg" alt=""/></span>
-                    Flip</a>
+                    <div class="flip-link"> <a class="nav-link" aria-current="page" href="index.html"> <span class="svgflip"> <img src="images/LOGO55.png" alt=""/></span>
+                        Flip</a>
+                    </div>
+                 
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Blog</a>
+                  <a class="nav-link" href="blog.html">Blog</a>
                 </li>
               </ul>
             </div>
@@ -68,20 +83,20 @@
         </nav>
   
         <!-- THE PIGGYVEST MAIN-SECTION -->
-        <div class="container">
+        <div class="container-fluid">
           <div class="main-section">
         
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                   <div class="left-images">
                     <img src="images/star.png" alt="star-img" />
-                    <img src="images/cup.png" alt="cup-img" />
+                    <img id="cup" src="images/cup.png" alt="cup-img" />
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="main-text">
                         <div class="main-header">
-                  <h2>Your Web3 <span>Spendings</span> all in One App</h2>
+                  <h2>Your Web3 <span id="spin"></span> all in One App</h2>
                         </div>
                         <div class="main-buttons">
                   <button type="button" class="btn btn-dark btn-lg download-button">
@@ -96,10 +111,10 @@
                 </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                   <div class="right-images">
-                    <img src="images/coin.png" alt="coin-img" />
-                    <img src="images/goggles.png" alt="goggles-img" />
+                    <img id="bluecoin" src="images/coin.png" alt="coin-img" />
+                    <img id="goggles" src="images/goggles.png" alt="goggles-img" />
                   </div>
                 </div>
               </div>
@@ -161,7 +176,7 @@
               <div class="col-6">
                 <div class="savings-item">
                   <div class="savings-logo">
-                    <img src="" alt="" />
+                    <img src="images/annual.svg" alt="annual" />
                   </div>
                   <p>6% Annual Percentage Yield</p>
                 </div>
@@ -169,7 +184,7 @@
               <div class="col-6">
                 <div class="savings-item">
                   <div class="savings-logo">
-                    <img src="" alt="" />
+                    <img src="images/lockup.svg" alt="lockup" />
                   </div>
                   <p>No Lock Up Time</p>
                 </div>
@@ -179,15 +194,15 @@
               <div class="col-6">
                 <div class="savings-item">
                   <div class="savings-logo">
-                    <img src="" alt="" />
+                    <img src="images/time.svg" alt="time" />
                   </div>
                   <p>Get Started In 59 Seconds</p>
                 </div>
               </div>
-              <div class="col-6 col-md-12">
+              <div class="col-6">
                 <div class="savings-item">
                   <div class="savings-logo">
-                    <img src="" alt="" />
+                    <img src="images/hourglass.svg" alt="hourglass" />
                   </div>
                   <p>365 Days Of Uninterrupted Returns </p>
                 </div>
@@ -311,16 +326,18 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-            <span
-              ><a class="navbar-brand" href="#"
-                ><img src="images/th.jpeg" alt="" /></a
-            ></span>
+            <div class="footer-logo">
+                <span
+                ><a class="navbar-brand text-left" href="#"
+                  ><img src="images/LOGO22.png" alt="" />Flip</a
+              ></span>
+            </div>
             <p class="mb-4">support@fluidcoins.com</p>
             <p>251 Little Falls Drive, New Castle County,</p>
             <p>Wilmington, DE 19808</p>
           </div>
           <div class="col-lg-2">
-            <h6><small>Flip</small></h6>
+            <h6>Flip</h6>
             <ul>
               <li><a href="#Help">Help</a></li>
               <li><a href="#Terms">Terms</a></li>
@@ -329,7 +346,7 @@
             </ul>
           </div>
           <div class="col-lg-2">
-            <h6><small>Socials</small></h6>
+            <h6>Socials</h6>
             <ul>
               <li><a href="#Instagram">Instagram</a></li>
               <li><a href="#Twitter">Twitter</a></li>

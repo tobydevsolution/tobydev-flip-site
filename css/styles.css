@@ -1,8 +1,11 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
-
+* {
+  font-family: Coda, sans-serif;
+}
 :root {
   --white-color: #fff;
   --bg-black: #000;
@@ -23,22 +26,24 @@ ul.navbar-nav li a {
   font-weight: bold;
   font-size: 1.1rem;
 }
+/* .flip-link {
+  width: 50px;
+  height: 50px;
+} */
 ul.navbar-nav li a img {
-  /* background-color: var(--bg-black); */
-  background-color: var(--white-color);
-  color: var(--white-color);
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  display: inline-block;
 }
-.svgflip path {
+/* .svgflip path {
   fill: var(--white-color);
   font-weight: bold;
-}
+} */
 nav.nav a {
   width: 150px;
   height: 50px;
-  border: 1px solid #fff;
+  border: 1px solid #000;
   color: var(--bg-black);
   background-color: var(--white-color);
 }
@@ -47,15 +52,54 @@ nav.nav a {
   background-color: var(--bg-black);
   color: var(--white-color);
 }
+.main-text {
+  margin: 30px;
+  padding: 0 0 0 0%;
+}
 .main-text h2 {
   font-size: 4rem;
 }
-.main-header h2 {
+.main-header {
   max-width: 100%;
-  font-weight: bolder;
+}
+.main-header h2 {
+  font-weight: 900;
+  text-align: center;
+
+  /* text-overflow: ; */
 }
 .main-header span {
   color: #abfb04;
+}
+#cup {
+  margin-left: 200px;
+}
+#goggles {
+  margin-left: -70px;
+}
+#bluecoin {
+  margin-left: -10px;
+}
+#spin {
+  /* color: blue; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+#spin:after {
+  content: "";
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    content: "Savings";
+  }
+
+  50% {
+    content: "Spendings";
+  }
+
+  100% {
+    content: "Earnings";
+  }
 }
 
 .left-images img {
@@ -74,8 +118,52 @@ nav.nav a {
   margin-left: 100px;
   margin-top: 50px;
 }
+@media (max-width: 500px) {
+  .left-images,
+  .right-images {
+    display: none;
+  }
+}
 .main-buttons {
   margin-top: 50px;
+  padding-left: 120px;
+}
+@media (max-width: 700px) {
+  .main-buttons {
+    background-color: #111;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    padding: 3%;
+  }
+  .main-buttons .download-button {
+    color: #000;
+    font-weight: bold;
+    font-size: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 30px;
+  }
+  .main-buttons::before {
+    content: "Download The App";
+    display: flex;
+    justify-content: right;
+    flex-direction: row-reverse;
+  }
+}
+
+.main-buttons .download-button {
+  color: #000;
+  background: var(--white-color);
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 1.2rem;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+.main-buttons .download-button i {
+  margin-right: 5px;
+  font-size: 1.2rem;
 }
 .rainbow {
   margin-top: 150px;
@@ -105,11 +193,13 @@ nav.nav a {
   left: 0;
   top: 20%;
 }
-
-.heroimage img {
+.heroimage {
   max-width: 700px;
   margin: 0 auto;
   display: block;
+}
+.heroimage img {
+  width: 100%;
 }
 
 .flipacks {
@@ -122,7 +212,7 @@ nav.nav a {
 }
 .flipack-text h2 {
   font-size: 80px;
-  font-weight: bolder;
+  font-weight: 900;
 }
 .flipimage {
   max-width: 600px;
@@ -147,21 +237,31 @@ nav.nav a {
 }
 .savings h3 {
   background-color: pink;
-  padding: 0.8rem;
+  padding: 1.5rem;
   border-radius: 50%;
-  width: 170px;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #aeff00;
+  display: inline-block;
   transform: rotate(-10deg);
   text-align: center;
 }
 .savings h2 {
   font-size: 3rem;
-  max-width: 300px;
-  font-weight: bolder;
+  max-width: 400px;
+  font-weight: 900;
+  margin: 5% 0 5% 0;
 }
 .savings-item p {
   font-size: 20px;
   font-weight: bold;
   margin-top: 50px;
+}
+.savings-logo {
+  width: 40px;
+  height: 40px;
+}
+.savings-logo img {
 }
 .savings-img {
   max-width: 300px;
@@ -229,7 +329,7 @@ nav.nav a {
   position: absolute;
   right: -30px;
   top: -60px;
-  transform: rotate(-10deg);
+  transform: rotate(-15deg);
 }
 .flip-card-one h6 {
   border: 7px solid #fff;
@@ -266,8 +366,8 @@ nav.nav a {
 }
 .greenp p {
   margin-bottom: 0;
-  font-size: 2.8rem;
-  font-weight: bolder;
+  font-size: 2.6rem;
+  font-weight: 900;
   line-height: 1;
 }
 .moving-money {
@@ -306,11 +406,21 @@ nav.nav a {
   background-color: var(--bg-black);
   color: var(--white-color);
 }
+.footer-logo {
+  max-width: 40px;
+}
+.footer img {
+  width: 100%;
+  margin-right: 10px;
+}
 
 footer.footer {
   padding-top: 70px;
 }
-
+.footer h6 {
+  color: grey;
+  font-weight: 900;
+}
 footer ul {
   list-style: none;
   padding: 0;

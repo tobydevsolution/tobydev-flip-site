@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #313131;
+      }
+      .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        flex-wrap: wrap;
+      }
+      .container .card {
+        position: relative;
+        max-width: 300px;
+        padding: 20px;
+        margin: 20px;
+        background: #3f3f3f;
+      }
+      .container .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 20px solid transparent;
+        border-top: 20px solid #17e78c;
+        border-right: 20px solid #17e78c;
+      }
+      .container .card.active::before {
+        border-top: 20px solid #ff3b7e;
+        border-right: 20px solid #ff3b7e;
+      }
+      .container .card .card-img {
+        margin-bottom: 10px;
+      }
+      .container .card .card-img img {
+        width: 100%;
+      }
+      .container .card .content {
+        position: relative;
+        height: 215px;
+        overflow: hidden;
+      }
+      .container .card.active .content {
+        height: auto;
+      }
+
+      .container .card .content::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: #fff;
+        background: linear-gradient(transparent, #3f3f3f);
+      }
+      .container .card.active .content::before {
+        display: none;
+      }
+
+      .container .card .content h3 {
+        color: #fff;
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .container .card .content p {
+        font-weight: 300;
+        color: #ccc;
+      }
+      .container .card .more {
+        position: relative;
+        padding: 10px 15px;
+        background: #17e78c;
+        margin-top: 15px;
+        display: inline-block;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #383838;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-size: 14px;
+      }
+      .container .card.active .more {
+        background: #ff3b7e;
+        color: #fff;
+      }
+      .container .card.active .content {
+        height: auto;
+      }
+      .container .card .more::before {
+        content: "Read More";
+      }
+      .container .card.active .more::before {
+        content: "Read Less";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-img">
+          <img src="images/USDTimg.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h3>Web & Mobile Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae illum
+            non excepturi. Iure aspernatur nihil minus, possimus voluptatum
+            necessitatibus porro nesciunt totam magni assumenda similique,
+            ratione laborum aliquam illum id libero dolorem beatae eius aperiam
+            enim quaerat magnam quo. Voluptatem quaerat quia quis expedita neque
+            harum consequatur, voluptatibus sed nisi.
+          </p>
+        </div>
+        <a class="more"></a>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="images/grow-your-savings-in-stablecoins.png" alt="" />
+        </div>
+        <div class="content">
+          <h3>Stablecoins</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae illum
+            non excepturi. Iure aspernatur nihil minus, possimus voluptatum
+            necessitatibus porro nesciunt totam magni assumenda similique,
+            ratione laborum aliquam illum id libero dolorem beatae eius aperiam
+            enim quaerat magnam quo. Voluptatem quaerat quia quis expedita neque
+            harum consequatur, voluptatibus sed nisi.
+          </p>
+        </div>
+        <a class="more"></a>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="images/virtual-card.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h3>Virtual Cards</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae illum
+            non excepturi. Iure aspernatur nihil minus, possimus voluptatum
+            necessitatibus porro nesciunt totam magni assumenda similique,
+            ratione laborum aliquam illum id libero dolorem beatae eius aperiam
+            enim quaerat magnam quo. Voluptatem quaerat quia quis expedita neque
+            harum consequatur, voluptatibus sed nisi.
+          </p>
+        </div>
+        <a class="more"></a>
+      </div>
+    </div>
+
+    <script>
+      let more = document.querySelector(".more");
+      for(let i = 0; i <more.length; 1++) {
+          more[i].addEventListener('click', function() {
+              more[i].parentNode.classList.toggle('active')
+          })
+      }
+    </script>
+  </body>
+</html>
